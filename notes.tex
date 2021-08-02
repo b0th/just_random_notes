@@ -1,0 +1,58 @@
+\documentclass{article}
+\title{Just random notes}
+\author{b0th}
+
+\usepackage{geometry}
+\geometry{legalpaper, margin=1.2in}
+
+% \usepackage{hyperref}
+% \hypersetup{
+%     colorlinks=true,
+%     linkcolor=cyan,
+%     filecolor=blue,      
+%     urlcolor=cyan,
+% }
+
+% usepackage{xcolor}
+% usepackage{framed}
+% definecolor{shadecolor}{RGB}{200,200,200}
+
+\usepackage{listings}
+
+\begin{document}
+\maketitle
+
+\begin{description}
+    \item[Runtime] \mbox{}\\Runtime describes software/instructions that are executed while your program is running, especially those instructions that you did not write explicitly, but are necessary for the proper execution of your code.
+    \item[KISS] \mbox{\textit{Keep It simple, stupid}}\\ The KISS principle states that most systems work best if they are kept simple rather than made complicated.
+    \item[Container] \mbox{}\\ Group of namespaces and control groups applied to a process.
+    \item[Namespace] \mbox{}\\ Limit what the process sees, here some namespaces
+    
+    \begin{itemize}
+        \item item
+        \item pid
+        \item net
+        \item mnt
+        \item uts
+        \item ipc
+        \item user
+    \end{itemize}
+
+    \textit{C functions to manage them}
+
+    \begin{itemize}
+        \item clone()
+        \item unshare()
+    \end{itemize}
+
+    \item[cgroup] \mbox{\textit{Control group}}\\ Limit what the process can use, here some cgroups
+    \begin{itemize}
+        \item memomry
+        \item CPU
+        \item network
+        \item devices
+        \item pids
+    \end{itemize} 
+
+\end{description}
+\end{document}
