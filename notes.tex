@@ -5,19 +5,32 @@
 \usepackage{geometry}
 \geometry{legalpaper, margin=1.2in}
 
-% \usepackage{hyperref}
-% \hypersetup{
-%     colorlinks=true,
-%     linkcolor=cyan,
-%     filecolor=blue,      
-%     urlcolor=cyan,
-% }
-
-% usepackage{xcolor}
-% usepackage{framed}
-% definecolor{shadecolor}{RGB}{200,200,200}
-
 \usepackage{listings}
+\usepackage{xcolor}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{codepurple},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                                
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
 
 \begin{document}
 \maketitle
@@ -26,7 +39,7 @@
     \item[Runtime] \mbox{}\\Runtime describes software/instructions that are executed while your program is running, especially those instructions that you did not write explicitly, but are necessary for the proper execution of your code.
     \item[KISS] \mbox{\textit{Keep It simple, stupid}}\\ The KISS principle states that most systems work best if they are kept simple rather than made complicated.
     \item[Container] \mbox{}\\ Group of namespaces and control groups applied to a process.
-    \item[Namespace] \mbox{}\\ Limit what the process sees, here some namespaces
+    \item[Linux kernel namespace] \mbox{}\\ Limit what the process sees, here some namespaces
     
     \begin{itemize}
         \item item
@@ -38,14 +51,14 @@
         \item user
     \end{itemize}
 
-    \textit{C functions to manage them}
+    C functions to manage them
 
     \begin{itemize}
         \item clone()
         \item unshare()
     \end{itemize}
 
-    \item[cgroup] \mbox{\textit{Control group}}\\ Limit what the process can use, here some cgroups
+    \item[Linux kernel cgroup] \mbox{\textit{Control group}}\\ Limit what the process can use, here some cgroups
     \begin{itemize}
         \item memomry
         \item CPU
@@ -53,6 +66,37 @@
         \item devices
         \item pids
     \end{itemize} 
+
+    \item[C++ inheritance class] \mbox{}\\ Single inheritance
+\begin{lstlisting}[language=C++]
+class Rectangle: public Shape {
+    public:
+       int getArea() { return (width * height); }
+};
+\end{lstlisting}
+    Multiple inheritance
+\begin{lstlisting}[language=C++]
+class Rectangle: public Shape1, Shape2, Shape3 {
+    public:
+       int getArea() { return (width * height); }
+};
+\end{lstlisting}
+    \item[C++ namespace] \mbox{}\\ Namespaces allow to group entities like classes, objects and functions under a name. Example of declaration
+\begin{lstlisting}[language=C++]
+namespace myNamespace
+{
+  int a = 0;
+}
+\end{lstlisting}
+
+Usage
+
+\begin{lstlisting}[language=C++]
+cout << myNamespace::a << endl
+\end{lstlisting}
+
+    \item[C++ cout] \mbox{\textit{character out}}\\
+    \item[C++ endl] \mbox{\textit{end line}}\\
 
 \end{description}
 \end{document}
