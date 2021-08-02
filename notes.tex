@@ -109,7 +109,7 @@ all: library.cpp main.cpp
 \end{lstlisting}
 
 \begin{lstlisting}
-$@ evaluates to all 
+$@ evaluates to all
 $< evaluates to library.cpp
 $^ evaluates to library.cpp main.cpp
 \end{lstlisting}
@@ -124,18 +124,29 @@ $^ evaluates to library.cpp main.cpp
 int socket(int domain, int type, int protocol);
 \end{lstlisting}
 
-    domain (socket protocol) examples
+    \subsection{domain (socket protocol) examples}
     \begin{description}
         \item[Local communication] AF\_UNIX, AF\_LOCAL
         \item[IPv4 Internet protocols] AF\_INET
         \item[IPv6 Internet protocols] AF\_INET6
     \end{description}
 
-    type (precise persistent connection or not) examples
+    \subsection{type (precise persistent connection or not) examples}
     \begin{description}
         \item[Two-way reliable communication] SOCK\_DSTREAM
         \item[Connectionless] SOCK\_DGRAM
     \end{description}
+
+    \item[C++ static method] \mbox{}\\
+\begin{lstlisting}[language=C++]
+class Rectangle {
+    public:
+        static int perimeter;
+}
+...
+std::cout << Rectangle::perimeter << std:endl
+\end{lstlisting} 
+     
 
 \end{description}
 \end{document}
