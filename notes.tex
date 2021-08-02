@@ -117,6 +117,25 @@ $^ evaluates to library.cpp main.cpp
     \item[Web CGI] \mbox{\textit{Common Gateway Interface}}\\
     Set of standards that define how information is exchanged between the web server and a custom script.
 
-    \item[Socket AF] \mbox{\textit{Address Family}}\\
+    \item[socket] \mbox{}\\
+    It's a network connector, it allows communication between two different processes on the same or different machines. To be more precise, it's a way to talk to other computers using standard Unix file descriptors.
+
+\begin{lstlisting}[language=C++]
+int socket(int domain, int type, int protocol);
+\end{lstlisting}
+
+    domain (socket protocol) examples
+    \begin{description}
+        \item[Local communication] AF\_UNIX, AF\_LOCAL
+        \item[IPv4 Internet protocols] AF\_INET
+        \item[IPv6 Internet protocols] AF\_INET6
+    \end{description}
+
+    type (precise persistent connection or not) examples
+    \begin{description}
+        \item[Two-way reliable communication] SOCK\_DSTREAM
+        \item[Connectionless] SOCK\_DGRAM
+    \end{description}
+
 \end{description}
 \end{document}
