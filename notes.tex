@@ -89,14 +89,30 @@ namespace myNamespace
 }
 \end{lstlisting}
 
-Usage
+    Usage
 
 \begin{lstlisting}[language=C++]
-cout << myNamespace::a << endl
+std::cout << myNamespace::a << std::endl
+\end{lstlisting}
+    or
+\begin{lstlisting}[language=C++]
+using namespace myNamespace;
+std::cout << a << std::endl
 \end{lstlisting}
 
     \item[C++ cout] \mbox{\textit{character out}}\\
-    \item[C++ endl] \mbox{\textit{end line}}\\
+    \item[C++ endl] \mbox{\textit{end line}}\\ 
+    \item[Makefile special variables] \mbox{}\\
+      
+\begin{lstlisting}
+all: library.cpp main.cpp
+\end{lstlisting}
+
+\begin{lstlisting}
+$@ evaluates to all 
+$< evaluates to library.cpp
+$^ evaluates to library.cpp main.cpp
+\end{lstlisting}
 
 \end{description}
 \end{document}
