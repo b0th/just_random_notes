@@ -146,7 +146,30 @@ class Rectangle {
 ...
 std::cout << Rectangle::perimeter << std:endl
 \end{lstlisting} 
-     
+
+    \item[C++ reference vs pointer] \mbox{}\\
+    Both value are implemented by storing the adress of an object but there are some differences
+    \begin{table}[htb]
+        \caption {Differences between a reference and a pointer}
+        \begin{tabular}{ | p{4cm} | p{4cm} | p{4cm} | }
+            \hline
+            \textbf{Main points} & \textbf{Reference} & \textbf{Pointer} \\
+            \hline
+            Initialization & Declare and initialize & Declare and initialize pointer at same step or in multiple line \\
+            \hline
+            Reassignment & Banned & Allowed \\
+            \hline
+            Memory adress & Share the same memory address with the original variable (takes some place in the stack too) & Own memory address and size on stack\\
+            \hline
+            NULL value & Banned & Allowed \\
+            \hline
+            Indirection (pointer to pointer as example) & Banned & Allowed\\
+            \hline
+           \end{tabular}
+        \end{table}
+
+    \item[C++ protected] \mbox{}\\
+    It allows derived class to acces base class variables 
 
 \end{description}
 \end{document}
